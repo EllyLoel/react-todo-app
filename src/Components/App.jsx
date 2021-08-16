@@ -17,6 +17,7 @@ const App = () => {
 		<main className='App'>
 			<TodoForm
 				onSubmit={text =>
+					text &&
 					setTodoListItems([
 						{ id: generateKey(text), text, complete: false },
 						...todoListItems,
